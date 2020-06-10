@@ -36,7 +36,7 @@ module.exports = (req, res) => {
       } else {
         let messageOptions = {
           from: 'info@embracethecurve.org',
-          to: 'lawrencechen2002@gmail.com',
+          to: 'angela.huang@embracethecurve.org',
           subject: `${senderName} contacted you using embracethecurve.org's contact form.`,
           text: `Sender's name: ${senderName} \n Sender's email: ${email} \n Message: ${message}`,
           replyTo: email,
