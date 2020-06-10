@@ -73,7 +73,7 @@ const Nav = () => (
         </ActiveLink>
       </li>
       <li>
-        <ActiveLink href="#contact-me" activeClassName="">
+        <ActiveLink href="#contact-me" activeClassName="nil">
           <a className="nav-link">Contact</a>
         </ActiveLink>
       </li>

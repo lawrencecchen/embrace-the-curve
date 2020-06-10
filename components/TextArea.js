@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { device } from './mediaQueries';
+import Message from 'react-formal/Message';
+import Field from 'react-formal/Field';
 
 const TextFieldWrapper = styled.div`
   display: flex;
@@ -18,7 +20,6 @@ const TextFieldWrapper = styled.div`
   flex: 1 1 0%;
   margin-right: 8px;
   transition: box-shadow 500ms ease;
-  margin-bottom: 20px;
 
   &:focus-within {
     box-shadow: rgba(46, 170, 220, 0.7) 0px 0px 0px 1px inset,
@@ -30,7 +31,7 @@ const TextFieldWrapper = styled.div`
   }
 `;
 
-const TextBox = styled.textarea`
+const TextBox = styled(Field)`
   font-size: inherit;
   min-height: 140px;
   line-height: inherit;
@@ -54,14 +55,27 @@ const StyledLabel = styled.label`
   font-weight: 500;
 `;
 
-const TextArea = ({ label, name, ...rest }) => (
+const StyledMessage = styled(Message)`
+  color: var(--red);
+`;
+
+const TextArea = ({ label, name, validateOn, ...rest }) => (
   <>
     <StyledLabel htmlFor={name} name={name}>
       {label}
     </StyledLabel>
     <TextFieldWrapper>
-      <TextBox type="text" name={name} id={name} {...rest} />
+      <TextBox
+        name={name}
+        id={name}
+        as="textarea"
+        validateOn={validateOn}
+        {...rest}
+      />
     </TextFieldWrapper>
+    <div>
+      <StyledMessage for={name} />
+    </div>
   </>
 );
 

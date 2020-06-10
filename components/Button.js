@@ -13,6 +13,7 @@ const Button = styled.button`
   border: none;
   font-family: var(--default-font);
   transition: all 250ms ease;
+  margin-top: 20px;
 
   &:hover,
   &:active {

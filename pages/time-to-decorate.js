@@ -100,7 +100,7 @@ const DealingWithPain = () => (
       <YoutubeVideoWrapper>
         <iframe
           src="https://www.youtube.com/embed/6SIuvGc4WHw"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />

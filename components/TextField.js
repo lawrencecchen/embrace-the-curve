@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Field from 'react-formal/Field';
+import Message from 'react-formal/Message';
 
 const TextFieldWrapper = styled.div`
   display: flex;
@@ -13,11 +15,10 @@ const TextFieldWrapper = styled.div`
     rgba(15, 15, 15, 0.1) 0px 1px 1px inset;
   background: white none repeat scroll 0% 0%;
   cursor: text;
-  height: 36px;
+  height: ${(props) => (props.as ? '146px' : '36px')};
   flex: 1 1 0%;
   margin-right: 8px;
   transition: box-shadow 0.5s ease-in-out;
-  margin-bottom: 20px;
 
   &:focus-within {
     box-shadow: rgba(46, 170, 220, 0.7) 0px 0px 0px 1px inset,
@@ -25,7 +26,7 @@ const TextFieldWrapper = styled.div`
   }
 `;
 
-const TextBox = styled.input`
+const TextBox = styled(Field)`
   font-size: inherit;
   line-height: inherit;
   border: medium none;
@@ -49,14 +50,28 @@ const StyledLabel = styled.label`
   font-weight: 500;
 `;
 
-const TextField = ({ label, name, ...rest }) => (
+const StyledMessage = styled(Message)`
+  padding-bottom: 20px;
+  color: var(--red);
+`;
+
+const TextField = ({ label, name, validateOn, as, ...rest }) => (
   <>
     <StyledLabel htmlFor={name} name={name}>
       {label}
     </StyledLabel>
     <TextFieldWrapper>
-      <TextBox type="text" name={name} id={name} {...rest} />
+      <TextBox
+        name={name}
+        id={name}
+        validateOn={validateOn}
+        as={as}
+        {...rest}
+      />
     </TextFieldWrapper>
+    <div>
+      <StyledMessage for={name} className="error" />
+    </div>
   </>
 );
 
