@@ -26,7 +26,7 @@ const Nav = () => (
         line-height: 1;
         color: var(--cultured);
       }
-      @media ${device.mobileS} {
+      @media ${device.mobileM} {
         a,
         .nav-link {
           font-size: 29px;
