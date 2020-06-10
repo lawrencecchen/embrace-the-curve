@@ -88,7 +88,7 @@ const IndexPage = () => (
     <Head>
       <meta
         name="description"
-        content="ETC is a nonprofit organization that strives to provide  fun ideas on how to decorate modified shoes, braces, and other scoliosis equipment in order to promote body positivity and happiness. Also, ETC is working on creating a shoe band that can be adhered to the outer sole of the modified shoe in order to beautify the design of the orthopedic shoe. ETC is also working on a low cost solution to a shoe lift, without the need for costly shoe modification by a cobbler."
+        content="Embrace the Curve is a nonprofit organization that strives to provide fun ideas on how to decorate modified shoes, braces, and other scoliosis equipment in order to promote body positivity and happiness. Also, ETC is working on creating a shoe band that can be adhered to the outer sole of the modified shoe in order to beautify the design of the orthopedic shoe. ETC is also working on a low cost solution to a shoe lift, without the need for costly shoe modification by a cobbler."
       />
 
       <title>Embrace the Curve</title>
