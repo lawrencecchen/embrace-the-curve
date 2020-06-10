@@ -6,7 +6,7 @@ const Nav = () => (
   <nav>
     <style jsx>{`
       ul {
-        margin-right: 28px;
+        margin-right: 18px;
         margin-left: auto;
         width: fit-content;
         text-align: right;
@@ -20,11 +20,17 @@ const Nav = () => (
       .nav-link,
       a {
         text-decoration: none;
-        font-size: 29px;
+        font-size: 19px;
         font-weight: bold;
         letter-spacing: 0.9px;
         line-height: 1;
         color: var(--cultured);
+      }
+      @media ${device.mobileS} {
+        a,
+        .nav-link {
+          font-size: 29px;
+        }
       }
 
       .active {
@@ -53,7 +59,7 @@ const Nav = () => (
     <div className="brand">
       {/* <a href="/">Embrace the Curve</a> */}
       <a href="/">
-        <img src={logo} />
+        <img src={logo} alt="logo" />
       </a>
     </div>
     <ul className="nav">
